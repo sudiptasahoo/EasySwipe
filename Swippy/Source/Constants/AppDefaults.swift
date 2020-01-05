@@ -20,6 +20,8 @@ public enum Defaults {
 //MARK: Metrics
 enum Metrics {
     static let screenWidth = UIScreen.main.bounds.width
+    static let cardWidth = Metrics.screenWidth - (28 * 2)
+    static let cardHeight = Metrics.cardWidth / 1.66 //1.66 is the credit card aspect ratio
 }
 
 //MARK:- UI Testing identifiers

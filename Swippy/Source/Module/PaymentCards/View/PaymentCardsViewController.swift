@@ -17,15 +17,19 @@ final class PaymentCardsViewController: UIViewController {
     var viewState: ViewState = .none
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: view.frame)
+        let tableView = UITableView()
         tableView.sectionIndexBackgroundColor = .clear
         tableView.backgroundColor = .pageBackground
         tableView.backgroundView?.backgroundColor = .pageBackground
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200
         tableView.keyboardDismissMode = .onDrag
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
         tableView.accessibilityIdentifier = UITestIdentifiers.cardTable
+        tableView.separatorColor = .clear
         tableView.prepareForAutolayout()
         
         return tableView
@@ -75,7 +79,13 @@ final class PaymentCardsViewController: UIViewController {
     
     //Apply AutoLayout Constraints
     private func setupConstraints() {
-        //to be appliied to tableview
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
 
@@ -97,7 +107,7 @@ extension PaymentCardsViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.viewCardDetails(at: indexPath.row)
+        //presenter?.viewCardDetails(at: indexPath.row)
     }
 }
 
