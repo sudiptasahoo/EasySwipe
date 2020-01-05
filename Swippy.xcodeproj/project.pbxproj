@@ -3,10 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019EFD3123C1D01100294C84 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */; };
+		019EFD3323C1D03E00294C84 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3223C1D03E00294C84 /* Collection+Safe.swift */; };
+		019EFD3523C1D05800294C84 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3423C1D05800294C84 /* UIViewController+Alert.swift */; };
+		019EFD3823C1D08400294C84 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3723C1D08400294C84 /* AppDefaults.swift */; };
+		019EFD3A23C1D0D700294C84 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3923C1D0D700294C84 /* Strings.swift */; };
+		019EFD3D23C1D1A200294C84 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3C23C1D1A200294C84 /* UITableView+Reusable.swift */; };
+		019EFD3F23C1D1D800294C84 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3E23C1D1D800294C84 /* UIColor+Theme.swift */; };
+		019EFD4123C1D23C00294C84 /* UIView+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4023C1D23C00294C84 /* UIView+Theme.swift */; };
+		019EFD4623C1D35100294C84 /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 019EFD4523C1D35100294C84 /* MockData.json */; };
+		019EFD4823C1E14A00294C84 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4723C1E14A00294C84 /* MockNetwork.swift */; };
+		019EFD4B23C1EC2100294C84 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4A23C1EC2100294C84 /* AppError.swift */; };
+		019EFD4F23C1F86800294C84 /* PaymentCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */; };
 		01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1701223BF8B5D007E21B1 /* AppDelegate.swift */; };
 		01A1701923BF8B60007E21B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701823BF8B60007E21B1 /* Assets.xcassets */; };
 		01A1701C23BF8B60007E21B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701B23BF8B60007E21B1 /* Preview Assets.xcassets */; };
@@ -21,6 +33,9 @@
 		01FABAEE23BF8C7C00A9A0CA /* PaymentCardsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */; };
 		01FABAF523C1C58F00A9A0CA /* PCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAF423C1C58F00A9A0CA /* PCard.swift */; };
 		01FABAF723C1C6C900A9A0CA /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAF623C1C6C900A9A0CA /* AppRouter.swift */; };
+		7F67CACC8CD475C9E6271F90 /* Pods_SwippyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5308A4C77AC2ED4A6736646F /* Pods_SwippyTests.framework */; };
+		9BAD1CEC7A8773E3D02BB903 /* Pods_Swippy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA7494E4E7DF1EEBF9533E7 /* Pods_Swippy.framework */; };
+		9E84E1A2DED0A14BEB2D8A6D /* Pods_Swippy_SwippyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEFE66D665D3750B62442F1 /* Pods_Swippy_SwippyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +56,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		019EFD3223C1D03E00294C84 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		019EFD3423C1D05800294C84 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		019EFD3723C1D08400294C84 /* AppDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
+		019EFD3923C1D0D700294C84 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		019EFD3C23C1D1A200294C84 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		019EFD3E23C1D1D800294C84 /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		019EFD4023C1D23C00294C84 /* UIView+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Theme.swift"; sourceTree = "<group>"; };
+		019EFD4523C1D35100294C84 /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		019EFD4723C1E14A00294C84 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
+		019EFD4A23C1EC2100294C84 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCell.swift; sourceTree = "<group>"; };
 		01A1700F23BF8B5D007E21B1 /* Swippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A1701223BF8B5D007E21B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A1701823BF8B60007E21B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +88,15 @@
 		01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsInteractor.swift; sourceTree = "<group>"; };
 		01FABAF423C1C58F00A9A0CA /* PCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCard.swift; sourceTree = "<group>"; };
 		01FABAF623C1C6C900A9A0CA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		18F1DD1A81B4D9F56103AE23 /* Pods-SwippyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwippyTests.debug.xcconfig"; path = "Target Support Files/Pods-SwippyTests/Pods-SwippyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		407A3496D2F630CEB6AB0FB4 /* Pods-Swippy-SwippyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swippy-SwippyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Swippy-SwippyUITests/Pods-Swippy-SwippyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4361BB1C3627E7FC3559163C /* Pods-Swippy-SwippyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swippy-SwippyUITests.release.xcconfig"; path = "Target Support Files/Pods-Swippy-SwippyUITests/Pods-Swippy-SwippyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5308A4C77AC2ED4A6736646F /* Pods_SwippyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwippyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5418E29709A2D56BD7D60BF6 /* Pods-SwippyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwippyTests.release.xcconfig"; path = "Target Support Files/Pods-SwippyTests/Pods-SwippyTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B3D706C9660B000C776DC90 /* Pods-Swippy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swippy.release.xcconfig"; path = "Target Support Files/Pods-Swippy/Pods-Swippy.release.xcconfig"; sourceTree = "<group>"; };
+		9EA7494E4E7DF1EEBF9533E7 /* Pods_Swippy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swippy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADEFE66D665D3750B62442F1 /* Pods_Swippy_SwippyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swippy_SwippyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8ECDC5D3ABEFC8EB2E4DB4 /* Pods-Swippy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swippy.debug.xcconfig"; path = "Target Support Files/Pods-Swippy/Pods-Swippy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BAD1CEC7A8773E3D02BB903 /* Pods_Swippy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F67CACC8CD475C9E6271F90 /* Pods_SwippyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +120,117 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E84E1A2DED0A14BEB2D8A6D /* Pods_Swippy_SwippyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019EFD2F23C1CFD300294C84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */,
+				019EFD3223C1D03E00294C84 /* Collection+Safe.swift */,
+				019EFD3423C1D05800294C84 /* UIViewController+Alert.swift */,
+				019EFD3C23C1D1A200294C84 /* UITableView+Reusable.swift */,
+				019EFD3E23C1D1D800294C84 /* UIColor+Theme.swift */,
+				019EFD4023C1D23C00294C84 /* UIView+Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		019EFD3623C1D07A00294C84 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				019EFD3723C1D08400294C84 /* AppDefaults.swift */,
+				019EFD3923C1D0D700294C84 /* Strings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		019EFD3B23C1D0F700294C84 /* MockAPI */ = {
+			isa = PBXGroup;
+			children = (
+				019EFD4523C1D35100294C84 /* MockData.json */,
+				019EFD4723C1E14A00294C84 /* MockNetwork.swift */,
+			);
+			path = MockAPI;
+			sourceTree = "<group>";
+		};
+		019EFD4423C1D2E600294C84 /* PaymentCards */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAF423C1C58F00A9A0CA /* PCard.swift */,
+			);
+			path = PaymentCards;
+			sourceTree = "<group>";
+		};
+		019EFD4923C1EC1100294C84 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				019EFD4A23C1EC2100294C84 /* AppError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		019EFD4C23C1F85400294C84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE623BF8C7C00A9A0CA /* PaymentCardsViewController.swift */,
+				019EFD4D23C1F85B00294C84 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		019EFD4D23C1F85B00294C84 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		019EFD5023C204BD00294C84 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE523BF8C7C00A9A0CA /* PaymentCardsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		019EFD5123C204C200294C84 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE423BF8C7C00A9A0CA /* PaymentCardsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		019EFD5223C204C900294C84 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE723BF8C7C00A9A0CA /* PaymentCardsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		019EFD5323C204CF00294C84 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		019EFD5423C204D700294C84 /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE323BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
 		01A1700623BF8B5D007E21B1 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +238,8 @@
 				01A1702823BF8B60007E21B1 /* SwippyTests */,
 				01A1703323BF8B60007E21B1 /* SwippyUITests */,
 				01A1701023BF8B5D007E21B1 /* Products */,
+				953447F71AB0AE665647DF8C /* Pods */,
+				DA7C69E42007082A03D33800 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,8 +292,13 @@
 		01FABAE123BF8C2100A9A0CA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				019EFD4923C1EC1100294C84 /* Errors */,
+				019EFD3B23C1D0F700294C84 /* MockAPI */,
+				019EFD3623C1D07A00294C84 /* Constants */,
+				019EFD2F23C1CFD300294C84 /* Extensions */,
 				01FABAF123C1C05200A9A0CA /* Assets */,
-				01FABAF023C1C04300A9A0CA /* App */,
+				01FABAF023C1C04300A9A0CA /* App Init */,
+				01FABAF323C1C09900A9A0CA /* Model */,
 				01FABAEF23C1C03000A9A0CA /* Module */,
 			);
 			path = Source;
@@ -157,13 +307,12 @@
 		01FABAE223BF8C2E00A9A0CA /* PaymentCards */ = {
 			isa = PBXGroup;
 			children = (
-				01FABAF323C1C09900A9A0CA /* Model */,
-				01FABAE323BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift */,
-				01FABAE423BF8C7C00A9A0CA /* PaymentCardsPresenter.swift */,
-				01FABAE523BF8C7C00A9A0CA /* PaymentCardsRouter.swift */,
-				01FABAE623BF8C7C00A9A0CA /* PaymentCardsViewController.swift */,
-				01FABAE723BF8C7C00A9A0CA /* PaymentCardsProtocols.swift */,
-				01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */,
+				019EFD5423C204D700294C84 /* ModuleBuilder */,
+				019EFD5323C204CF00294C84 /* Interactor */,
+				019EFD5223C204C900294C84 /* Protocols */,
+				019EFD5123C204C200294C84 /* Presenter */,
+				019EFD5023C204BD00294C84 /* Router */,
+				019EFD4C23C1F85400294C84 /* View */,
 			);
 			path = PaymentCards;
 			sourceTree = "<group>";
@@ -176,13 +325,13 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
-		01FABAF023C1C04300A9A0CA /* App */ = {
+		01FABAF023C1C04300A9A0CA /* App Init */ = {
 			isa = PBXGroup;
 			children = (
 				01A1701223BF8B5D007E21B1 /* AppDelegate.swift */,
 				01FABAF623C1C6C900A9A0CA /* AppRouter.swift */,
 			);
-			path = App;
+			path = "App Init";
 			sourceTree = "<group>";
 		};
 		01FABAF123C1C05200A9A0CA /* Assets */ = {
@@ -205,9 +354,32 @@
 		01FABAF323C1C09900A9A0CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				01FABAF423C1C58F00A9A0CA /* PCard.swift */,
+				019EFD4423C1D2E600294C84 /* PaymentCards */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		953447F71AB0AE665647DF8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED8ECDC5D3ABEFC8EB2E4DB4 /* Pods-Swippy.debug.xcconfig */,
+				6B3D706C9660B000C776DC90 /* Pods-Swippy.release.xcconfig */,
+				407A3496D2F630CEB6AB0FB4 /* Pods-Swippy-SwippyUITests.debug.xcconfig */,
+				4361BB1C3627E7FC3559163C /* Pods-Swippy-SwippyUITests.release.xcconfig */,
+				18F1DD1A81B4D9F56103AE23 /* Pods-SwippyTests.debug.xcconfig */,
+				5418E29709A2D56BD7D60BF6 /* Pods-SwippyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA7C69E42007082A03D33800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EA7494E4E7DF1EEBF9533E7 /* Pods_Swippy.framework */,
+				ADEFE66D665D3750B62442F1 /* Pods_Swippy_SwippyUITests.framework */,
+				5308A4C77AC2ED4A6736646F /* Pods_SwippyTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +389,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01A1703923BF8B60007E21B1 /* Build configuration list for PBXNativeTarget "Swippy" */;
 			buildPhases = (
+				FA341954B26EBD2DC98BFF18 /* [CP] Check Pods Manifest.lock */,
 				01A1700B23BF8B5D007E21B1 /* Sources */,
 				01A1700C23BF8B5D007E21B1 /* Frameworks */,
 				01A1700D23BF8B5D007E21B1 /* Resources */,
+				8F69F4D335C4DFEADA45A5D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +408,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01A1703C23BF8B60007E21B1 /* Build configuration list for PBXNativeTarget "SwippyTests" */;
 			buildPhases = (
+				92E741E2E9FAD9EF80CC8E4B /* [CP] Check Pods Manifest.lock */,
 				01A1702123BF8B60007E21B1 /* Sources */,
 				01A1702223BF8B60007E21B1 /* Frameworks */,
 				01A1702323BF8B60007E21B1 /* Resources */,
@@ -252,9 +427,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01A1703F23BF8B60007E21B1 /* Build configuration list for PBXNativeTarget "SwippyUITests" */;
 			buildPhases = (
+				BC06327084372CF3B460565C /* [CP] Check Pods Manifest.lock */,
 				01A1702C23BF8B60007E21B1 /* Sources */,
 				01A1702D23BF8B60007E21B1 /* Frameworks */,
 				01A1702E23BF8B60007E21B1 /* Resources */,
+				FD3640BE4315250EA3266739 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A1701F23BF8B60007E21B1 /* LaunchScreen.storyboard in Resources */,
+				019EFD4623C1D35100294C84 /* MockData.json in Resources */,
 				01A1701C23BF8B60007E21B1 /* Preview Assets.xcassets in Resources */,
 				01A1701923BF8B60007E21B1 /* Assets.xcassets in Resources */,
 			);
@@ -336,20 +514,134 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F69F4D335C4DFEADA45A5D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swippy/Pods-Swippy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swippy/Pods-Swippy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swippy/Pods-Swippy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92E741E2E9FAD9EF80CC8E4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwippyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC06327084372CF3B460565C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swippy-SwippyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA341954B26EBD2DC98BFF18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swippy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD3640BE4315250EA3266739 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swippy-SwippyUITests/Pods-Swippy-SwippyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swippy-SwippyUITests/Pods-Swippy-SwippyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swippy-SwippyUITests/Pods-Swippy-SwippyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01A1700B23BF8B5D007E21B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				01FABAEA23BF8C7C00A9A0CA /* PaymentCardsPresenter.swift in Sources */,
+				019EFD3323C1D03E00294C84 /* Collection+Safe.swift in Sources */,
 				01FABAEC23BF8C7C00A9A0CA /* PaymentCardsViewController.swift in Sources */,
+				019EFD3523C1D05800294C84 /* UIViewController+Alert.swift in Sources */,
 				01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */,
 				01FABAEE23BF8C7C00A9A0CA /* PaymentCardsInteractor.swift in Sources */,
+				019EFD3A23C1D0D700294C84 /* Strings.swift in Sources */,
 				01FABAF523C1C58F00A9A0CA /* PCard.swift in Sources */,
+				019EFD4F23C1F86800294C84 /* PaymentCardCell.swift in Sources */,
 				01FABAE923BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift in Sources */,
+				019EFD3F23C1D1D800294C84 /* UIColor+Theme.swift in Sources */,
+				019EFD4123C1D23C00294C84 /* UIView+Theme.swift in Sources */,
+				019EFD4B23C1EC2100294C84 /* AppError.swift in Sources */,
 				01FABAF723C1C6C900A9A0CA /* AppRouter.swift in Sources */,
+				019EFD3D23C1D1A200294C84 /* UITableView+Reusable.swift in Sources */,
+				019EFD3123C1D01100294C84 /* UIView+Autolayout.swift in Sources */,
 				01FABAED23BF8C7C00A9A0CA /* PaymentCardsProtocols.swift in Sources */,
+				019EFD4823C1E14A00294C84 /* MockNetwork.swift in Sources */,
 				01FABAEB23BF8C7C00A9A0CA /* PaymentCardsRouter.swift in Sources */,
+				019EFD3823C1D08400294C84 /* AppDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +804,7 @@
 		};
 		01A1703A23BF8B60007E21B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED8ECDC5D3ABEFC8EB2E4DB4 /* Pods-Swippy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +826,7 @@
 		};
 		01A1703B23BF8B60007E21B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B3D706C9660B000C776DC90 /* Pods-Swippy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -554,6 +848,7 @@
 		};
 		01A1703D23BF8B60007E21B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F1DD1A81B4D9F56103AE23 /* Pods-SwippyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -576,6 +871,7 @@
 		};
 		01A1703E23BF8B60007E21B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5418E29709A2D56BD7D60BF6 /* Pods-SwippyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -598,6 +894,7 @@
 		};
 		01A1704023BF8B60007E21B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407A3496D2F630CEB6AB0FB4 /* Pods-Swippy-SwippyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -618,6 +915,7 @@
 		};
 		01A1704123BF8B60007E21B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4361BB1C3627E7FC3559163C /* Pods-Swippy-SwippyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
