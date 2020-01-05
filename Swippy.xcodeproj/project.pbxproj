@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1701223BF8B5D007E21B1 /* AppDelegate.swift */; };
-		01A1701523BF8B5D007E21B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1701423BF8B5D007E21B1 /* SceneDelegate.swift */; };
-		01A1701723BF8B5D007E21B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1701623BF8B5D007E21B1 /* ContentView.swift */; };
 		01A1701923BF8B60007E21B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701823BF8B60007E21B1 /* Assets.xcassets */; };
 		01A1701C23BF8B60007E21B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701B23BF8B60007E21B1 /* Preview Assets.xcassets */; };
 		01A1701F23BF8B60007E21B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701D23BF8B60007E21B1 /* LaunchScreen.storyboard */; };
 		01A1702A23BF8B60007E21B1 /* SwippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1702923BF8B60007E21B1 /* SwippyTests.swift */; };
 		01A1703523BF8B60007E21B1 /* SwippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1703423BF8B60007E21B1 /* SwippyUITests.swift */; };
+		01FABAE923BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE323BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift */; };
+		01FABAEA23BF8C7C00A9A0CA /* PaymentCardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE423BF8C7C00A9A0CA /* PaymentCardsPresenter.swift */; };
+		01FABAEB23BF8C7C00A9A0CA /* PaymentCardsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE523BF8C7C00A9A0CA /* PaymentCardsRouter.swift */; };
+		01FABAEC23BF8C7C00A9A0CA /* PaymentCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE623BF8C7C00A9A0CA /* PaymentCardsViewController.swift */; };
+		01FABAED23BF8C7C00A9A0CA /* PaymentCardsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE723BF8C7C00A9A0CA /* PaymentCardsProtocols.swift */; };
+		01FABAEE23BF8C7C00A9A0CA /* PaymentCardsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */; };
+		01FABAF523C1C58F00A9A0CA /* PCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAF423C1C58F00A9A0CA /* PCard.swift */; };
+		01FABAF723C1C6C900A9A0CA /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FABAF623C1C6C900A9A0CA /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +43,6 @@
 /* Begin PBXFileReference section */
 		01A1700F23BF8B5D007E21B1 /* Swippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A1701223BF8B5D007E21B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01A1701423BF8B5D007E21B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01A1701623BF8B5D007E21B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01A1701823BF8B60007E21B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A1701B23BF8B60007E21B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01A1701E23BF8B60007E21B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 		01A1703023BF8B60007E21B1 /* SwippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A1703423BF8B60007E21B1 /* SwippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippyUITests.swift; sourceTree = "<group>"; };
 		01A1703623BF8B60007E21B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01FABAE323BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsModuleBuilder.swift; sourceTree = "<group>"; };
+		01FABAE423BF8C7C00A9A0CA /* PaymentCardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsPresenter.swift; sourceTree = "<group>"; };
+		01FABAE523BF8C7C00A9A0CA /* PaymentCardsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsRouter.swift; sourceTree = "<group>"; };
+		01FABAE623BF8C7C00A9A0CA /* PaymentCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsViewController.swift; sourceTree = "<group>"; };
+		01FABAE723BF8C7C00A9A0CA /* PaymentCardsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsProtocols.swift; sourceTree = "<group>"; };
+		01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardsInteractor.swift; sourceTree = "<group>"; };
+		01FABAF423C1C58F00A9A0CA /* PCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCard.swift; sourceTree = "<group>"; };
+		01FABAF623C1C6C900A9A0CA /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +111,8 @@
 		01A1701123BF8B5D007E21B1 /* Swippy */ = {
 			isa = PBXGroup;
 			children = (
-				01A1701223BF8B5D007E21B1 /* AppDelegate.swift */,
-				01A1701423BF8B5D007E21B1 /* SceneDelegate.swift */,
-				01A1701623BF8B5D007E21B1 /* ContentView.swift */,
-				01A1701823BF8B60007E21B1 /* Assets.xcassets */,
-				01A1701D23BF8B60007E21B1 /* LaunchScreen.storyboard */,
-				01A1702023BF8B60007E21B1 /* Info.plist */,
+				01FABAE123BF8C2100A9A0CA /* Source */,
+				01FABAF223C1C07000A9A0CA /* Supporting Files */,
 				01A1701A23BF8B60007E21B1 /* Preview Content */,
 			);
 			path = Swippy;
@@ -134,6 +142,72 @@
 				01A1703623BF8B60007E21B1 /* Info.plist */,
 			);
 			path = SwippyUITests;
+			sourceTree = "<group>";
+		};
+		01FABAE123BF8C2100A9A0CA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAF123C1C05200A9A0CA /* Assets */,
+				01FABAF023C1C04300A9A0CA /* App */,
+				01FABAEF23C1C03000A9A0CA /* Module */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		01FABAE223BF8C2E00A9A0CA /* PaymentCards */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAF323C1C09900A9A0CA /* Model */,
+				01FABAE323BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift */,
+				01FABAE423BF8C7C00A9A0CA /* PaymentCardsPresenter.swift */,
+				01FABAE523BF8C7C00A9A0CA /* PaymentCardsRouter.swift */,
+				01FABAE623BF8C7C00A9A0CA /* PaymentCardsViewController.swift */,
+				01FABAE723BF8C7C00A9A0CA /* PaymentCardsProtocols.swift */,
+				01FABAE823BF8C7C00A9A0CA /* PaymentCardsInteractor.swift */,
+			);
+			path = PaymentCards;
+			sourceTree = "<group>";
+		};
+		01FABAEF23C1C03000A9A0CA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAE223BF8C2E00A9A0CA /* PaymentCards */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		01FABAF023C1C04300A9A0CA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				01A1701223BF8B5D007E21B1 /* AppDelegate.swift */,
+				01FABAF623C1C6C900A9A0CA /* AppRouter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		01FABAF123C1C05200A9A0CA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				01A1701823BF8B60007E21B1 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		01FABAF223C1C07000A9A0CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01A1701D23BF8B60007E21B1 /* LaunchScreen.storyboard */,
+				01A1702023BF8B60007E21B1 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01FABAF323C1C09900A9A0CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAF423C1C58F00A9A0CA /* PCard.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +341,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FABAEA23BF8C7C00A9A0CA /* PaymentCardsPresenter.swift in Sources */,
+				01FABAEC23BF8C7C00A9A0CA /* PaymentCardsViewController.swift in Sources */,
 				01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */,
-				01A1701523BF8B5D007E21B1 /* SceneDelegate.swift in Sources */,
-				01A1701723BF8B5D007E21B1 /* ContentView.swift in Sources */,
+				01FABAEE23BF8C7C00A9A0CA /* PaymentCardsInteractor.swift in Sources */,
+				01FABAF523C1C58F00A9A0CA /* PCard.swift in Sources */,
+				01FABAE923BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift in Sources */,
+				01FABAF723C1C6C900A9A0CA /* AppRouter.swift in Sources */,
+				01FABAED23BF8C7C00A9A0CA /* PaymentCardsProtocols.swift in Sources */,
+				01FABAEB23BF8C7C00A9A0CA /* PaymentCardsRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +518,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Swippy/Preview Content\"";
 				DEVELOPMENT_TEAM = N5BV6E5637;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Swippy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = "Swippy/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,8 +539,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Swippy/Preview Content\"";
 				DEVELOPMENT_TEAM = N5BV6E5637;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Swippy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = "Swippy/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
