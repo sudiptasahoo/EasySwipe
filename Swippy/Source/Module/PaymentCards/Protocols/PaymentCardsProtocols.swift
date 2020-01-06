@@ -47,6 +47,10 @@ protocol PaymentCardsViewOutput: AnyObject {
     /// - Parameter index: the index location of the card
     func payNowCard(at index: Int)
     
+    ///View Last Statement tapped on the card
+    /// - Parameter index: the index location of the card
+    func viewLastStatement(at index: Int)
+    
     ///Add New card button tapped by the user
     func addNewCardTapped()
 }
@@ -75,6 +79,10 @@ protocol PaymentCardsRouterInput: AnyObject {
     ///View details of the selected card
     /// - Parameter card: the payment card selected by the user
     func viewDetails(of card: PCard)
+    
+    ///View last statement details of the selected card
+    /// - Parameter card: the payment card selected by the user
+    func viewLastStatment(of card: PCard)
     
     ///Routes to Add New payment card module
     func addNewCard()

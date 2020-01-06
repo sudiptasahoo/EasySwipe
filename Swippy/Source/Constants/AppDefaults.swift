@@ -20,8 +20,21 @@ public enum Defaults {
 //MARK: Metrics
 enum Metrics {
     static let screenWidth = UIScreen.main.bounds.width
-    static let cardWidth = Metrics.screenWidth - (28 * 2)
-    static let cardHeight = Metrics.cardWidth / 1.66 //1.66 is the credit card aspect ratio
+    static let cardWidth: CGFloat = Metrics.screenWidth - (28.0 * 2)
+    static let cardHeight: CGFloat = Metrics.cardWidth / 1.66 //1.66 is the credit card aspect ratio
+}
+
+//MARK: Card
+enum Card {
+    
+    ///The percentage of the card to be opened max eitehr on left or right. This is calculated against the card width
+    static let openPercentage: CGFloat = 60.0
+    
+    ///The minimum swipe distance to be considered for the successfull transition to left/right/center. This is calculated against the card width
+    static let panThresholdPercentage: CGFloat = 10.0
+    
+    ///The percentage of the card of the opened/auto swiped while demo
+    static let demoSwipePercentage: CGFloat = 20.0
 }
 
 //MARK:- UI Testing identifiers

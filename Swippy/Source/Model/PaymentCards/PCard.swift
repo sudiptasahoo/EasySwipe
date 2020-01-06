@@ -113,6 +113,7 @@ struct PCard: Decodable {
     var type: PCardType
     var bankName: PCardBank
     var due: PCardDue?
+    var actions: [PCardAction]?
 }
 
 struct PCardDue: Decodable {
@@ -138,5 +139,17 @@ enum PCardDueState: Decodable {
         } else {
             self = .due(interval: value)
         }
+    }
+}
+
+enum PCardAction: String, Decodable {
+    
+    case view_details
+    case pay_now
+    case view_last_statement
+    case unknown
+    
+    public init(from decoder: Decoder) throws {
+        self = try PCardAction(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
     }
 }

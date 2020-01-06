@@ -73,7 +73,8 @@ final class PaymentCardsViewController: UIViewController {
     
     //Apply Theming for views here
     private func themeViews() {
-        self.title = "cards"
+        title = "cards"
+        navigationController?.setNavigationBarHidden(true, animated: false)
         view.signatureThemify()
     }
     
@@ -86,6 +87,36 @@ final class PaymentCardsViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    //Close all cards
+    private func closeCards(exceptAt exclusionIndexPath: IndexPath?) {
+        for indexPath in tableView.indexPathsForVisibleRows ?? [] {
+            if let eIndexPath = exclusionIndexPath {
+                guard indexPath != eIndexPath else {continue}
+            }
+            if let cell = tableView.cellForRow(at: indexPath) as? PaymentCardCell {
+                cell.closeCardIfOpen()
+            }
+        }
+    }
+    
+    //Animate and hint card swipe to user
+    private func animateAndHint(wiith directions: [CardDirection], initialDuration: Double = 0.3, duration: Double = 0.5) {
+        
+        if let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? PaymentCardCell {
+            var totalDuration = 0.0
+            for direction in directions {
+                DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration + initialDuration) {
+                    cell.demoAnimateAndHint(to: direction)
+                }
+                totalDuration += initialDuration
+                DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration + duration) {
+                    cell.closeCardIfOpen()
+                }
+                totalDuration += duration
+            }
+        }
     }
 }
 
@@ -102,12 +133,17 @@ extension PaymentCardsViewController: UITableViewDelegate, UITableViewDataSource
         }
         
         let cell = tableView.dequeueReusableCell(for: indexPath) as PaymentCardCell
-        cell.configure(with: card)
+        cell.configure(with: card, indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //presenter?.viewCardDetails(at: indexPath.row)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        closeCards(exceptAt: nil)
     }
 }
 
@@ -126,6 +162,7 @@ extension PaymentCardsViewController: PaymentCardsViewInput {
             case .content:
                 tableView.isHidden = false
                 tableView.reloadData()
+                animateAndHint(wiith: [.left, .right])
             case .loading:
                 //can be used to show loader on the screen
                 break
@@ -137,5 +174,27 @@ extension PaymentCardsViewController: PaymentCardsViewInput {
     
     func insertCards(at indexPaths: [IndexPath]) {
         tableView.insertRows(at: indexPaths, with: .automatic)
+    }
+}
+
+extension PaymentCardsViewController: PaymentCardCellDelegate {
+    
+    func actionPerformed(of type: PCardAction, indexPath: IndexPath) {
+        
+        switch type {
+            case .view_details: presenter?.viewCardDetails(at: indexPath.row)
+            case .pay_now: presenter?.payNowCard(at: indexPath.row)
+            case .view_last_statement: presenter?.viewLastStatement(at: indexPath.row)
+            case .unknown: break
+        }
+        
+    }
+    
+    func cardSwipped(to direction: CardDirection, at indexPath: IndexPath) {
+        
+        switch direction {
+            case .left, .right: closeCards(exceptAt: indexPath)
+            case .center: break
+        }
     }
 }

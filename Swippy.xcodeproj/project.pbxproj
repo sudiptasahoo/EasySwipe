@@ -19,6 +19,8 @@
 		019EFD4823C1E14A00294C84 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4723C1E14A00294C84 /* MockNetwork.swift */; };
 		019EFD4B23C1EC2100294C84 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4A23C1EC2100294C84 /* AppError.swift */; };
 		019EFD4F23C1F86800294C84 /* PaymentCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */; };
+		01A092CA23C2321A009C27CB /* UIPanGesture+Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A092C923C2321A009C27CB /* UIPanGesture+Directions.swift */; };
+		01A092CD23C27973009C27CB /* ObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A092CC23C27973009C27CB /* ObservableView.swift */; };
 		01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1701223BF8B5D007E21B1 /* AppDelegate.swift */; };
 		01A1701923BF8B60007E21B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701823BF8B60007E21B1 /* Assets.xcassets */; };
 		01A1701C23BF8B60007E21B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701B23BF8B60007E21B1 /* Preview Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		019EFD4723C1E14A00294C84 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		019EFD4A23C1EC2100294C84 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCell.swift; sourceTree = "<group>"; };
+		01A092C923C2321A009C27CB /* UIPanGesture+Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGesture+Directions.swift"; sourceTree = "<group>"; };
+		01A092CC23C27973009C27CB /* ObservableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableView.swift; sourceTree = "<group>"; };
 		01A1700F23BF8B5D007E21B1 /* Swippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A1701223BF8B5D007E21B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A1701823BF8B60007E21B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				019EFD3C23C1D1A200294C84 /* UITableView+Reusable.swift */,
 				019EFD3E23C1D1D800294C84 /* UIColor+Theme.swift */,
 				019EFD4023C1D23C00294C84 /* UIView+Theme.swift */,
+				01A092C923C2321A009C27CB /* UIPanGesture+Directions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		019EFD4C23C1F85400294C84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01A092CB23C27950009C27CB /* Special View */,
 				01FABAE623BF8C7C00A9A0CA /* PaymentCardsViewController.swift */,
 				019EFD4D23C1F85B00294C84 /* Cell */,
 			);
@@ -229,6 +235,14 @@
 				01FABAE323BF8C7C00A9A0CA /* PaymentCardsModuleBuilder.swift */,
 			);
 			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		01A092CB23C27950009C27CB /* Special View */ = {
+			isa = PBXGroup;
+			children = (
+				01A092CC23C27973009C27CB /* ObservableView.swift */,
+			);
+			path = "Special View";
 			sourceTree = "<group>";
 		};
 		01A1700623BF8B5D007E21B1 = {
@@ -627,6 +641,7 @@
 				01FABAEC23BF8C7C00A9A0CA /* PaymentCardsViewController.swift in Sources */,
 				019EFD3523C1D05800294C84 /* UIViewController+Alert.swift in Sources */,
 				01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */,
+				01A092CD23C27973009C27CB /* ObservableView.swift in Sources */,
 				01FABAEE23BF8C7C00A9A0CA /* PaymentCardsInteractor.swift in Sources */,
 				019EFD3A23C1D0D700294C84 /* Strings.swift in Sources */,
 				01FABAF523C1C58F00A9A0CA /* PCard.swift in Sources */,
@@ -637,6 +652,7 @@
 				019EFD4B23C1EC2100294C84 /* AppError.swift in Sources */,
 				01FABAF723C1C6C900A9A0CA /* AppRouter.swift in Sources */,
 				019EFD3D23C1D1A200294C84 /* UITableView+Reusable.swift in Sources */,
+				01A092CA23C2321A009C27CB /* UIPanGesture+Directions.swift in Sources */,
 				019EFD3123C1D01100294C84 /* UIView+Autolayout.swift in Sources */,
 				01FABAED23BF8C7C00A9A0CA /* PaymentCardsProtocols.swift in Sources */,
 				019EFD4823C1E14A00294C84 /* MockNetwork.swift in Sources */,

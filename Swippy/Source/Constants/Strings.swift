@@ -14,4 +14,8 @@ public enum Strings {
     static let ok = "OK"
     static let retry = "RETRY"
     static let cancel = "CANCEL"
+    
+    static let viewDetails = "view details"
+    static let payNow = "pay now"
+    static let viewLastStatement = "last statement"
 }

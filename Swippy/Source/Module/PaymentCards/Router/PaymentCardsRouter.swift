@@ -34,6 +34,11 @@ final class PaymentCardsRouter: PaymentCardsRouterInput {
         viewController?.showAlert(title: "View Details", message: "This will open the card details screen. \n\(message)")
     }
     
+    func viewLastStatment(of card: PCard) {
+        let message = "Title: \(card.title) \nCard No.:\(card.number)"
+        viewController?.showAlert(title: "View Last Statement Details", message: "This will open the card details screen. \n\(message)")
+    }
+    
     func addNewCard() {
         viewController?.showAlert(title: "Add New Card", message: "Add New Card tapped. This will init the AddNewCard module and let the user add a new card")
     }

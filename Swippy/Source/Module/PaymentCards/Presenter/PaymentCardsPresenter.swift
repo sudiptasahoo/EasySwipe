@@ -52,6 +52,11 @@ final class PaymentCardsPresenter: PaymentCardsViewOutput, PaymentCardsModuleInp
         router.payNow(with: pCard)
     }
     
+    func viewLastStatement(at index: Int) {
+        guard let pCard = try? pCardViewModel.getCard(at: index) else { return }
+        router.viewLastStatment(of: pCard)
+    }
+    
     func addNewCardTapped() {
         router.addNewCard()
     }
