@@ -35,6 +35,8 @@ enum Card {
     
     ///The percentage of the card of the opened/auto swiped while demo
     static let demoSwipePercentage: CGFloat = 20.0
+    
+    static let inset: UIEdgeInsets = UIEdgeInsets(top: 30, left: 16, bottom: -30, right: -16)
 }
 
 //MARK:- UI Testing identifiers

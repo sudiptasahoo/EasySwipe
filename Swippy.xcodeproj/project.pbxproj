@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01751E0B23C3B4D9003966B8 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01751E0A23C3B4D9003966B8 /* UILabel+Extensions.swift */; };
 		019EFD3123C1D01100294C84 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */; };
 		019EFD3323C1D03E00294C84 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3223C1D03E00294C84 /* Collection+Safe.swift */; };
 		019EFD3523C1D05800294C84 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3423C1D05800294C84 /* UIViewController+Alert.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01751E0A23C3B4D9003966B8 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		019EFD3223C1D03E00294C84 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		019EFD3423C1D05800294C84 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				019EFD3E23C1D1D800294C84 /* UIColor+Theme.swift */,
 				019EFD4023C1D23C00294C84 /* UIView+Theme.swift */,
 				01A092C923C2321A009C27CB /* UIPanGesture+Directions.swift */,
+				01751E0A23C3B4D9003966B8 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 			files = (
 				01FABAEA23BF8C7C00A9A0CA /* PaymentCardsPresenter.swift in Sources */,
 				019EFD3323C1D03E00294C84 /* Collection+Safe.swift in Sources */,
+				01751E0B23C3B4D9003966B8 /* UILabel+Extensions.swift in Sources */,
 				01FABAEC23BF8C7C00A9A0CA /* PaymentCardsViewController.swift in Sources */,
 				019EFD3523C1D05800294C84 /* UIViewController+Alert.swift in Sources */,
 				01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */,

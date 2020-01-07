@@ -32,13 +32,58 @@ protocol PaymentCardCellDelegate {
 
 class PaymentCardCell: UITableViewCell, Reusable {
     
-    private lazy var titleLbl: UILabel = {
+    private lazy var cardTitleLbl: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
-        lbl.textColor = .white
-        lbl.numberOfLines = 0
+        lbl.textColor = .primaryTextColor
+        lbl.numberOfLines = 2
         lbl.prepareForAutolayout()
+        lbl.addSignatureShadow()
         return lbl
+    }()
+    
+    private lazy var cardNoLbl: UILabel = {
+        let lbl = UILabel()
+        lbl.font = UIFont.boldSystemFont(ofSize: 16)
+        lbl.textColor = .primaryTextColor
+        lbl.numberOfLines = 1
+        lbl.prepareForAutolayout()
+        lbl.addSignatureShadow()
+        return lbl
+    }()
+    
+    private lazy var cardHolderNameLbl: UILabel = {
+        let lbl = UILabel()
+        lbl.font = UIFont.boldSystemFont(ofSize: 16)
+        lbl.textColor = .primaryTextColor
+        lbl.numberOfLines = 1
+        lbl.prepareForAutolayout()
+        lbl.addSignatureShadow()
+        return lbl
+    }()
+    
+    private let bankImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.prepareForAutolayout()
+        return imageView
+    }()
+    
+    private let networkImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.prepareForAutolayout()
+        return imageView
+    }()
+    
+    private let cardBackgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.prepareForAutolayout()
+        return imageView
     }()
     
     private lazy var cardView: UIView = {
@@ -52,7 +97,7 @@ class PaymentCardCell: UITableViewCell, Reusable {
     
     private lazy var bottomView: UIView = {
         let view = UIView()
-        view.backgroundColor = .gray
+        view.backgroundColor = .bottomCardBackground
         view.prepareForAutolayout()
         view.layer.cornerRadius = 12
         view.layer.masksToBounds = true
@@ -85,7 +130,7 @@ class PaymentCardCell: UITableViewCell, Reusable {
     private let actionLbl: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.boldSystemFont(ofSize: 10)
-        lbl.textColor = .white
+        lbl.textColor = .secondaryTextColor
         lbl.numberOfLines = 1
         return lbl
     }()
@@ -133,11 +178,7 @@ class PaymentCardCell: UITableViewCell, Reusable {
         themify()
         addPanGesture()
         addTapGestures()
-    }
-    
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        layoutIfNeeded()
+        //self.contentView.autoresizingMask = .flexibleHeight
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -177,19 +218,26 @@ class PaymentCardCell: UITableViewCell, Reusable {
     }
     
     private func addViews(){
-        cardView.addSubview(titleLbl)
+        cardView.addSubview(cardBackgroundImageView)
+        cardView.addSubview(cardTitleLbl)
+        cardView.addSubview(cardNoLbl)
+        cardView.addSubview(cardHolderNameLbl)
+        cardView.addSubview(bankImageView)
+        cardView.addSubview(networkImageView)
+
         bottomView.addSubview(actionStack)
         contentView.addSubview(bottomView)
         contentView.addSubview(cardView)
     }
     
     private func makeConstraintAdjustments() {
-        
+
         NSLayoutConstraint.activate([
             bottomView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
             bottomView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 28),
             bottomView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
-            bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
+            bottomView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24),
+            bottomView.heightAnchor.constraint(equalToConstant: Metrics.cardHeight)
         ])
         
         actionLeftConstraint = actionStack.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 36)
@@ -203,36 +251,87 @@ class PaymentCardCell: UITableViewCell, Reusable {
             cardView.topAnchor.constraint(equalTo: bottomView.topAnchor),
             cardView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor),
             cardView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor),
-            cardView.heightAnchor.constraint(equalToConstant: Metrics.cardHeight),
-            cardView.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor)
+            cardView.heightAnchor.constraint(equalToConstant: Metrics.cardHeight)
+            //cardView.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            titleLbl.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 30),
-            titleLbl.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
-            titleLbl.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
-            titleLbl.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -30)
+            cardBackgroundImageView.topAnchor.constraint(equalTo: cardView.topAnchor),
+            cardBackgroundImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor),
+            cardBackgroundImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor),
+            cardBackgroundImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            cardTitleLbl.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Card.inset.top),
+            cardTitleLbl.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Card.inset.left),
+            cardTitleLbl.trailingAnchor.constraint(equalTo: bankImageView.leadingAnchor, constant: -8)
+        ])
+        
+        NSLayoutConstraint.activate([
+            cardHolderNameLbl.topAnchor.constraint(equalTo: cardNoLbl.bottomAnchor, constant: 8),
+            cardHolderNameLbl.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Card.inset.left),
+            cardHolderNameLbl.trailingAnchor.constraint(equalTo: networkImageView.leadingAnchor, constant: 12),
+            cardHolderNameLbl.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Card.inset.bottom)
+        ])
+        
+        NSLayoutConstraint.activate([
+            cardNoLbl.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: Card.inset.left),
+            cardNoLbl.trailingAnchor.constraint(equalTo: cardHolderNameLbl.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            bankImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: Card.inset.top),
+            bankImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: Card.inset.right),
+            bankImageView.heightAnchor.constraint(equalToConstant: Metrics.cardWidth * 0.15),
+            bankImageView.widthAnchor.constraint(equalToConstant: Metrics.cardWidth * 0.3)
+        ])
+        
+        NSLayoutConstraint.activate([
+            networkImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Card.inset.bottom),
+            networkImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: Card.inset.right),
+            networkImageView.heightAnchor.constraint(equalToConstant: Metrics.cardWidth * 0.05),
+            networkImageView.widthAnchor.constraint(equalToConstant: Metrics.cardWidth * 0.1)
+        ])
+        
+        //contentView.layoutIfNeeded()
+        
     }
     
     private func themify() {
         selectionStyle = .none
-        backgroundColor = .signature
+        signatureThemify()
     }
     
     func configure(with card: PCard, indexPath: IndexPath) {
         
         self.indexPath = indexPath
-        var message = card.title + "\n" + card.number + "\n" + card.cardHolderName
-        if let due = card.due {
-            message += "\n\n" + "Due: \(due.currency) \(due.amount)"
+        cardTitleLbl.text = card.title
+        cardNoLbl.text = card.number
+        cardHolderNameLbl.text = card.cardHolderName
+        if let logo = card.bankName.getLogoName() {
+            bankImageView.image = UIImage(named: logo)
+        } else {
+            bankImageView.image = nil
         }
-        titleLbl.text = message
+        
+        if let logo = card.type.getLogoName() {
+            networkImageView.image = UIImage(named: logo)
+        } else {
+            networkImageView.image = nil
+        }
+        
+        if let background = card.bankName.getCardBackground() {
+            cardBackgroundImageView.image = UIImage(named: background)
+        } else {
+            cardBackgroundImageView.image = nil
+            cardBackgroundImageView.backgroundColor = .gray //Default background if any new card is introduced
+        }
         
         let bottomViewHeight = card.due != nil ? Metrics.cardHeight + 60 : Metrics.cardHeight
-        NSLayoutConstraint.activate([
-            bottomView.heightAnchor.constraint(greaterThanOrEqualToConstant: bottomViewHeight)
-        ])
+//        NSLayoutConstraint.activate([
+//            bottomView.heightAnchor.constraint(greaterThanOrEqualToConstant: bottomViewHeight)
+//        ])
         
         removeAllActions()
         addActions(from: card)
@@ -265,8 +364,8 @@ class PaymentCardCell: UITableViewCell, Reusable {
             actionHStack.addGestureRecognizer(tapGesture)
             
             let lbl = UILabel()
-            lbl.font = UIFont.boldSystemFont(ofSize: 10)
-            lbl.textColor = .white
+            lbl.font = UIFont.boldSystemFont(ofSize: 12)
+            lbl.textColor = .secondaryTextColor
             lbl.numberOfLines = 1
             
             let imageView = UIImageView()
@@ -276,19 +375,9 @@ class PaymentCardCell: UITableViewCell, Reusable {
                 imageView.heightAnchor.constraint(equalToConstant: 24),
                 imageView.widthAnchor.constraint(equalToConstant: 24)
             ])
-
-            switch action {
-                case .view_details:
-                    lbl.text = Strings.viewDetails
-                    imageView.image = UIImage(named: "view-details")
-                case .pay_now:
-                    lbl.text = Strings.payNow
-                    imageView.image = UIImage(named: "view-details")
-                case .view_last_statement:
-                    lbl.text = Strings.viewLastStatement
-                    imageView.image = UIImage(named: "view-details")
-                default: break
-            }
+            
+            lbl.text = action.getTitle()
+            imageView.image = UIImage(named: action.getIcon())
             lbl.sizeToFit()
             actionHStack.addArrangedSubview(imageView)
             actionHStack.addArrangedSubview(lbl)
@@ -403,12 +492,13 @@ class PaymentCardCell: UITableViewCell, Reusable {
     private func adjustActionVisibility() {
                 
         if cardView.center.x < CARD_CENTER {
-            actionRightConstraint.isActive = true
             actionLeftConstraint.isActive = false
+            actionRightConstraint.isActive = true
         } else if cardView.center.x > CARD_CENTER {
             actionRightConstraint.isActive = false
             actionLeftConstraint.isActive = true
         }
+        //contentView.layoutIfNeeded()
     }
     
     private func setupBoundaries() {

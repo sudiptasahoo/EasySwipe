@@ -7,7 +7,7 @@
         {
             "id": "48822393341",
             "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
+            "number": "4221 XXXX XXXX 4344",
             "card_holder_name": "SUDIPTA SAHOO",
             "type": "VISA",
             "bank_name": "CITI",
@@ -15,11 +15,11 @@
         },
         {
             "id": "48822393341",
-            "title": "CITIBANK REWARDS PLATINUM",
+            "title": "SBI REWARDZ",
             "number": "4221 XXXX XXXX 8776",
             "card_holder_name": "SUDIPTA SAHOO",
-            "type": "VISA",
-            "bank_name": "CITI",
+            "type": "MASTERC",
+            "bank_name": "SBI",
             "due": {
                 "id": "123243",
                 "amount": 242.33,
@@ -30,8 +30,8 @@
         },
         {
             "id": "48822394455",
-            "title": "ICICI REWARDS PLATINUM",
-            "number": "4332 XXXX XXXX 8977",
+            "title": "ICICI CHIP PLATINUM",
+            "number": "4332 XXXX XXXX 6564",
             "card_holder_name": "SUDIPTA SAHOO",
             "type": "MASTERC",
             "bank_name": "ICICI",
@@ -45,11 +45,11 @@
         },
         {
             "id": "48822393341",
-            "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
+            "title": "HDFC DINERS CLUBMILES",
+            "number": "4221 XXXXX X7657",
             "card_holder_name": "SUDIPTA SAHOO",
-            "type": "VISA",
-            "bank_name": "CITI",
+            "type": "DINERS",
+            "bank_name": "HDFC",
             "actions": ["view_details", "pay_now", "view_last_statement"]
         },
         {

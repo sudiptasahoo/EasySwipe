@@ -20,6 +20,18 @@ extension UIColor{
     }
     
     class var pageBackground: UIColor{
-        return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        return UIColor(red: 18/255, green: 20/255, blue: 28/255, alpha: 1)
+    }
+    
+    class var bottomCardBackground: UIColor{
+        return UIColor(red: 25/255, green: 31/255, blue: 42/255, alpha: 1)
+    }
+    
+    class var primaryTextColor: UIColor{
+        return .white
+    }
+    
+    class var secondaryTextColor: UIColor{
+        return UIColor(red: 162/255, green: 164/255, blue: 168/255, alpha: 1)
     }
 }

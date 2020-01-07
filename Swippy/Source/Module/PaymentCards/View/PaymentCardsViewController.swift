@@ -23,8 +23,7 @@ final class PaymentCardsViewController: UIViewController {
         tableView.backgroundView?.backgroundColor = .pageBackground
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 200.0
         tableView.keyboardDismissMode = .onDrag
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false

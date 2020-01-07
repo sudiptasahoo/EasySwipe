@@ -36,7 +36,7 @@ final class PaymentCardsRouter: PaymentCardsRouterInput {
     
     func viewLastStatment(of card: PCard) {
         let message = "Title: \(card.title) \nCard No.:\(card.number)"
-        viewController?.showAlert(title: "View Last Statement Details", message: "This will open the card details screen. \n\(message)")
+        viewController?.showAlert(title: "View Last Statement Details", message: "This will open the card last statement details screen. \n\(message)")
     }
     
     func addNewCard() {

@@ -75,7 +75,7 @@ struct PCardResponse: Decodable{
     var stat: String
 }
 
-enum PCardType: String, Decodable {
+enum PCardBank: String, Decodable {
     
     case HDFC
     case SBI
@@ -85,12 +85,36 @@ enum PCardType: String, Decodable {
     case ICICI
     case unknown
     
+    func getLogoName() -> String? {
+        switch self {
+            case .HDFC: return "hdfc_logo"
+            case .SBI: return "sbi_logo"
+            case .CITI: return "citibank_logo"
+            case .STANC: return "stanc_logo"
+            case .YES: return "yes_logo"
+            case .ICICI: return "icici_logo"
+            case .unknown: return nil
+        }
+    }
+    
+    func getCardBackground() -> String? {
+        switch self {
+            case .HDFC: return "hdfc_card"
+            case .SBI: return "sbi_card"
+            case .CITI: return "citibank_card"
+            case .STANC: return "stanc_card"
+            case .YES: return "yes_card"
+            case .ICICI: return "icici_card"
+            case .unknown: return nil
+        }
+    }
+    
     public init(from decoder: Decoder) throws {
-        self = try PCardType(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
+        self = try PCardBank(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
     }
 }
 
-enum PCardBank: String, Decodable {
+enum PCardType: String, Decodable {
     
     case MASTERC
     case VISA
@@ -100,7 +124,18 @@ enum PCardBank: String, Decodable {
     case unknown
     
     public init(from decoder: Decoder) throws {
-        self = try PCardBank(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
+        self = try PCardType(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
+    }
+    
+    func getLogoName() -> String? {
+        switch self {
+            case .MASTERC: return "mastercard_logo"
+            case .VISA: return "visa_logo"
+            case .DINERS: return "diners_logo"
+            case .AMEX: return "amex_logo"
+            case .DISCOVER: return "discover_logo"
+            case .unknown: return nil
+        }
     }
 }
 
@@ -151,5 +186,29 @@ enum PCardAction: String, Decodable {
     
     public init(from decoder: Decoder) throws {
         self = try PCardAction(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
+    }
+    
+    func getIcon() -> String {
+        switch self {
+            case .view_details:
+                return "viewdetails_action"
+            case .pay_now:
+                return "paynow_action"
+            case .view_last_statement:
+                return "viewlaststatement_action"
+            default: return "generic_action"
+        }
+    }
+    
+    func getTitle() -> String {
+        switch self {
+            case .view_details:
+                return Strings.viewDetails
+            case .pay_now:
+                return Strings.payNow
+            case .view_last_statement:
+                return Strings.viewLastStatement
+            default: return "action"
+        }
     }
 }
