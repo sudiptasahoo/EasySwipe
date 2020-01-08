@@ -27,7 +27,7 @@ struct CardConfig {
     
     static let `default` = CardConfig()
     
-    let carSwipeBehaviour: CardSwipeBehaviour = .credLike
+    let cardSwipeBehaviour: CardSwipeBehaviour = .credLike
     let cardAutoClosingBehaviour: CardAutoClosingBehaviour = .delayed
     
     ///The percentage of the card to be opened max eitehr on left or right. This is calculated against the card width

@@ -16,7 +16,7 @@ final class PaymentCardsPresenter: PaymentCardsViewOutput, PaymentCardsModuleInp
     var router: PaymentCardsRouterInput!
     var interactor: PaymentCardsInteractorInput!
     var pCardViewModel: PCardViewModel
-    var disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     
     //MARK: Initialization
     init() {

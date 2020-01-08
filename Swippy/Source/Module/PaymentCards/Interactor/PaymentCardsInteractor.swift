@@ -12,11 +12,11 @@ import RxSwift
 final class PaymentCardsInteractor: PaymentCardsInteractorInput {
     
     //MARK: Properties
-    var network: MockNetwork!
+    var network: NetworkService!
     
     //MARK: Initialization
-    init() {
-        network = MockNetwork()
+    init(network: NetworkService) {
+        self.network = network
     }
     
     //MARK: PaymentCardsInteractorInput methods

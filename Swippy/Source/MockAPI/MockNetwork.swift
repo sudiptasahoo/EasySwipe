@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct MockNetwork {
+protocol NetworkService {
+    func fetchPaymentCards(with page: Int, pageSize: Int) -> PCardResponse?
+}
+
+struct MockNetwork: NetworkService {
     
     func fetchPaymentCards(with page: Int, pageSize: Int) -> PCardResponse? {
         

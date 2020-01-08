@@ -15,7 +15,7 @@ struct PaymentCardsModuleBuilder: PaymentCardsBuilder {
     static func buildModule() -> PaymentCardsViewController {
         let viewController = PaymentCardsViewController()
         let router = PaymentCardsRouter(viewController: viewController)
-        let interactor = PaymentCardsInteractor()
+        let interactor = PaymentCardsInteractor(network: MockNetwork())
         let presenter = PaymentCardsPresenter()
         
         viewController.presenter = presenter

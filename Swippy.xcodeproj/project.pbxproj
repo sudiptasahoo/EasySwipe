@@ -147,6 +147,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		0163C18A23C66C200008754B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				01FABAF423C1C58F00A9A0CA /* PCard.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		019EFD2F23C1CFD300294C84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,14 +186,6 @@
 				019EFD4723C1E14A00294C84 /* MockNetwork.swift */,
 			);
 			path = MockAPI;
-			sourceTree = "<group>";
-		};
-		019EFD4423C1D2E600294C84 /* PaymentCards */ = {
-			isa = PBXGroup;
-			children = (
-				01FABAF423C1C58F00A9A0CA /* PCard.swift */,
-			);
-			path = PaymentCards;
 			sourceTree = "<group>";
 		};
 		019EFD4923C1EC1100294C84 /* Errors */ = {
@@ -331,7 +331,6 @@
 				019EFD2F23C1CFD300294C84 /* Extensions */,
 				01FABAF123C1C05200A9A0CA /* Assets */,
 				01FABAF023C1C04300A9A0CA /* App Init */,
-				01FABAF323C1C09900A9A0CA /* Model */,
 				01FABAEF23C1C03000A9A0CA /* Module */,
 			);
 			path = Source;
@@ -340,6 +339,7 @@
 		01FABAE223BF8C2E00A9A0CA /* PaymentCards */ = {
 			isa = PBXGroup;
 			children = (
+				0163C18A23C66C200008754B /* Entity */,
 				0163C18723C5BEB80008754B /* Config */,
 				019EFD5423C204D700294C84 /* ModuleBuilder */,
 				019EFD5323C204CF00294C84 /* Interactor */,
@@ -383,14 +383,6 @@
 				01A1702023BF8B60007E21B1 /* Info.plist */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		01FABAF323C1C09900A9A0CA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				019EFD4423C1D2E600294C84 /* PaymentCards */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		953447F71AB0AE665647DF8C /* Pods */ = {

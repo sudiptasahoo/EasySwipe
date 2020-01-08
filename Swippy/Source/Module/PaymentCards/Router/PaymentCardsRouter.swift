@@ -26,7 +26,7 @@ final class PaymentCardsRouter: PaymentCardsRouterInput {
         if let due = card.due {
             message += "\nDue: \(due.currency) \(due.amount)"
         }
-        viewController?.showAlert(title: "Pay Now", message: "\(card.title) \n\(card.number)")
+        viewController?.showAlert(title: "Pay Now", message: message)
     }
     
     func viewDetails(of card: PCard) {

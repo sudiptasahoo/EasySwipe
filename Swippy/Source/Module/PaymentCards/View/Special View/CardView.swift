@@ -118,7 +118,6 @@ class CardView: UIView {
             cardBackgroundImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             cardBackgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            
             cardTitleLbl.topAnchor.constraint(equalTo: topAnchor, constant: CardUI.inset.top),
             cardTitleLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: CardUI.inset.left),
             cardTitleLbl.trailingAnchor.constraint(equalTo: bankImageView.leadingAnchor, constant: -8),
@@ -148,13 +147,23 @@ class CardView: UIView {
         
         assert(config.panThresholdPercentage < config.openPercentage, "panThresholdPercentage should be less than openPercentage")
         
+        //Center of the Swippeable Card
         CARD_CENTER = center.x
+        
+        //Total displacement possible by the card
         let cardDisplacement = config.openPercentage * CardUI.cardWidth
+        
+        //Accordingly, pre-calculating the left and right boundaries for the swippeable card
         let CARD_LEFT_BOUNDARY = CARD_CENTER + ((CardUI.cardWidth - cardDisplacement) - CardUI.cardWidth/2)
         let CARD_RIGHT_BOUNDARY = CARD_CENTER - ((CardUI.cardWidth - cardDisplacement) - CardUI.cardWidth/2)
-        CARD_SWIPE_THRESHOLD = CardUI.cardWidth * config.panThresholdPercentage
+        
+        //Calculating boundaries wrt the center of the card
         CARD_CENTER_LEFT_THRESHOLD = CARD_LEFT_BOUNDARY - CardUI.cardWidth/2
         CARD_CENTER_RIGHT_THRESHOLD = CARD_RIGHT_BOUNDARY + CardUI.cardWidth/2
+        
+        //Calculating swipe threashold - after how much of swipe distance, the swipe action should be considered
+        CARD_SWIPE_THRESHOLD = CardUI.cardWidth * config.panThresholdPercentage
+
     }
         
     //MARK:- Gesture Handling
@@ -198,7 +207,7 @@ class CardView: UIView {
                             } else {
                                 animateCard(to: .right)
                             }
-                    }
+                        }
                     
                     case .right:
                         //Detect threshold and animate
@@ -216,14 +225,14 @@ class CardView: UIView {
                             } else {
                                 animateCard(to: .left)
                             }
-                    }
+                        }
                     
                     default: break
                 }
                 
                 if case .delayed = config.cardAutoClosingBehaviour {
                     updateSwipeState(to: getDirection(fromCenterX: center.x))
-            }
+                }
             default: break
         }
     }
@@ -234,11 +243,11 @@ class CardView: UIView {
             updateSwipeState(to: getDirection(fromCenterX: center.x))
         }
         
-        switch config.carSwipeBehaviour {
+        switch config.cardSwipeBehaviour {
             case .credLike:
                 if x >= CARD_CENTER_LEFT_THRESHOLD && x <= CARD_CENTER_RIGHT_THRESHOLD {
                     center = CGPoint(x: x, y: center.y)
-            }
+                }
             
             case .spring:
                 center = CGPoint(x: x, y: center.y)

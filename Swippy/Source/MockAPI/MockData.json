@@ -50,7 +50,7 @@
             "card_holder_name": "SUDIPTA SAHOO",
             "type": "DINERS",
             "bank_name": "HDFC",
-            "actions": ["view_details", "pay_now", "view_last_statement"]
+            "actions": ["view_details"]
         },
         {
             "id": "48822393341",
@@ -63,82 +63,22 @@
                 "id": "123243",
                 "amount": 242.33,
                 "currency": "₹",
-                "state": "due in 3 days"
+                "state": "due in 2 days"
             },
             "actions": ["view_details", "pay_now", "view_last_statement"]
         },
         {
             "id": "48822393341",
             "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
+            "number": "4221 XXXX XXXX 5346",
             "card_holder_name": "SUDIPTA SAHOO",
             "type": "VISA",
             "bank_name": "CITI",
             "due": {
                 "id": "123243",
-                "amount": 242.33,
+                "amount": 4343.66,
                 "currency": "₹",
-                "state": "due in 3 days"
-            },
-            "actions": ["view_details", "pay_now", "view_last_statement"]
-        },
-        {
-            "id": "48822393341",
-            "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
-            "card_holder_name": "SUDIPTA SAHOO",
-            "type": "VISA",
-            "bank_name": "CITI",
-            "due": {
-                "id": "123243",
-                "amount": 242.33,
-                "currency": "₹",
-                "state": "due in 3 days"
-            },
-            "actions": ["view_details", "pay_now"]
-        },
-        {
-            "id": "48822393341",
-            "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
-            "card_holder_name": "SUDIPTA SAHOO",
-            "type": "VISA",
-            "bank_name": "CITI",
-            "due": {
-                "id": "123243",
-                "amount": 242.33,
-                "currency": "₹",
-                "state": "due in 3 days"
-            },
-            "actions": ["view_details", "pay_now", "view_last_statement"]
-        },
-        {
-            "id": "48822393341",
-            "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
-            "card_holder_name": "SUDIPTA SAHOO",
-            "type": "VISA",
-            "bank_name": "CITI",
-            "due": {
-                "id": "123243",
-                "amount": 242.33,
-                "currency": "₹",
-                "state": "due in 3 days"
-            },
-            "actions": ["view_details", "pay_now", "view_last_statement"]
-        },
-        {
-            "id": "48822393341",
-            "title": "CITIBANK REWARDS PLATINUM",
-            "number": "4221 XXXX XXXX 8776",
-            "card_holder_name": "SUDIPTA SAHOO",
-            "type": "VISA",
-            "bank_name": "CITI",
-            "due": {
-                "id": "123243",
-                "amount": 242.33,
-                "currency": "₹",
-                "state": "due in 3 days"
+                "state": "due in 5 days"
             },
             "actions": ["view_details", "pay_now", "view_last_statement"]
         }
