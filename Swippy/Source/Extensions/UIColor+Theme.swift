@@ -34,4 +34,12 @@ extension UIColor{
     class var secondaryTextColor: UIColor{
         return UIColor(red: 162/255, green: 164/255, blue: 168/255, alpha: 1)
     }
+    
+    class var successGreen: UIColor{
+        return UIColor(red: 80/255, green: 200/255, blue: 120/255, alpha: 1)
+    }
+    
+    class var failRed: UIColor{
+        return UIColor(red: 204/255, green: 51/255, blue: 51/255, alpha: 1)
+    }
 }

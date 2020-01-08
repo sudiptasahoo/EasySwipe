@@ -24,7 +24,7 @@
                 "id": "123243",
                 "amount": 242.33,
                 "currency": "₹",
-                "state": "due in 3 days"
+                "state": "fully_paid"
             },
             "actions": ["view_details", "pay_now", "view_last_statement"]
         },

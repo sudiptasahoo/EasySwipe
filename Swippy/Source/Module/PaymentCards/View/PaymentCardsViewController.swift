@@ -14,7 +14,7 @@ final class PaymentCardsViewController: UIViewController {
     
     //MARK: Properties
     var presenter: PaymentCardsViewOutput?
-    var viewState: ViewState = .none
+    private var viewState: ViewState = .none
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -22,8 +22,8 @@ final class PaymentCardsViewController: UIViewController {
         tableView.backgroundColor = .pageBackground
         tableView.backgroundView?.backgroundColor = .pageBackground
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200.0
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.keyboardDismissMode = .onDrag
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
@@ -104,10 +104,10 @@ final class PaymentCardsViewController: UIViewController {
     private func animateAndHint(wiith directions: [CardDirection], initialDuration: Double = 0.3, duration: Double = 0.5) {
         
         if let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? PaymentCardCell {
-            var totalDuration = 0.0
+            var totalDuration = Double.zero
             for direction in directions {
                 DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration + initialDuration) {
-                    cell.demoAnimateAndHint(to: direction)
+                    cell.demoAnimationAndHint(to: direction)
                 }
                 totalDuration += initialDuration
                 DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration + duration) {
@@ -135,10 +135,6 @@ extension PaymentCardsViewController: UITableViewDelegate, UITableViewDataSource
         cell.configure(with: card, indexPath: indexPath)
         cell.delegate = self
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //presenter?.viewCardDetails(at: indexPath.row)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -186,7 +182,6 @@ extension PaymentCardsViewController: PaymentCardCellDelegate {
             case .view_last_statement: presenter?.viewLastStatement(at: indexPath.row)
             case .unknown: break
         }
-        
     }
     
     func cardSwipped(to direction: CardDirection, at indexPath: IndexPath) {

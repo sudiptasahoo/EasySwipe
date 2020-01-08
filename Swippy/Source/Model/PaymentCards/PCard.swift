@@ -175,6 +175,17 @@ enum PCardDueState: Decodable {
             self = .due(interval: value)
         }
     }
+    
+    func getDueTitle() -> String {
+        switch self {
+            case .fullyPaid:
+                return "fully paid"
+            case .due(let interval):
+                return interval
+            case .unknown:
+                return "due"
+        }
+    }
 }
 
 enum PCardAction: String, Decodable {

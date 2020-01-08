@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0163C18223C598CC0008754B /* DueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C18123C598CC0008754B /* DueView.swift */; };
+		0163C18423C5B4440008754B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C18323C5B4440008754B /* CardView.swift */; };
+		0163C18623C5BB150008754B /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C18523C5BB150008754B /* ActionView.swift */; };
+		0163C18923C5BEC50008754B /* CardConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0163C18823C5BEC50008754B /* CardConfig.swift */; };
 		01751E0B23C3B4D9003966B8 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01751E0A23C3B4D9003966B8 /* UILabel+Extensions.swift */; };
 		019EFD3123C1D01100294C84 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */; };
 		019EFD3323C1D03E00294C84 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD3223C1D03E00294C84 /* Collection+Safe.swift */; };
@@ -21,7 +25,6 @@
 		019EFD4B23C1EC2100294C84 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4A23C1EC2100294C84 /* AppError.swift */; };
 		019EFD4F23C1F86800294C84 /* PaymentCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */; };
 		01A092CA23C2321A009C27CB /* UIPanGesture+Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A092C923C2321A009C27CB /* UIPanGesture+Directions.swift */; };
-		01A092CD23C27973009C27CB /* ObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A092CC23C27973009C27CB /* ObservableView.swift */; };
 		01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1701223BF8B5D007E21B1 /* AppDelegate.swift */; };
 		01A1701923BF8B60007E21B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701823BF8B60007E21B1 /* Assets.xcassets */; };
 		01A1701C23BF8B60007E21B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A1701B23BF8B60007E21B1 /* Preview Assets.xcassets */; };
@@ -59,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0163C18123C598CC0008754B /* DueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueView.swift; sourceTree = "<group>"; };
+		0163C18323C5B4440008754B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0163C18523C5BB150008754B /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		0163C18823C5BEC50008754B /* CardConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConfig.swift; sourceTree = "<group>"; };
 		01751E0A23C3B4D9003966B8 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		019EFD3023C1D01100294C84 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		019EFD3223C1D03E00294C84 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
@@ -73,7 +80,6 @@
 		019EFD4A23C1EC2100294C84 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		019EFD4E23C1F86800294C84 /* PaymentCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCell.swift; sourceTree = "<group>"; };
 		01A092C923C2321A009C27CB /* UIPanGesture+Directions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGesture+Directions.swift"; sourceTree = "<group>"; };
-		01A092CC23C27973009C27CB /* ObservableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableView.swift; sourceTree = "<group>"; };
 		01A1700F23BF8B5D007E21B1 /* Swippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A1701223BF8B5D007E21B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A1701823BF8B60007E21B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0163C18723C5BEB80008754B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0163C18823C5BEC50008754B /* CardConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		019EFD2F23C1CFD300294C84 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,7 +257,9 @@
 		01A092CB23C27950009C27CB /* Special View */ = {
 			isa = PBXGroup;
 			children = (
-				01A092CC23C27973009C27CB /* ObservableView.swift */,
+				0163C18123C598CC0008754B /* DueView.swift */,
+				0163C18323C5B4440008754B /* CardView.swift */,
+				0163C18523C5BB150008754B /* ActionView.swift */,
 			);
 			path = "Special View";
 			sourceTree = "<group>";
@@ -324,6 +340,7 @@
 		01FABAE223BF8C2E00A9A0CA /* PaymentCards */ = {
 			isa = PBXGroup;
 			children = (
+				0163C18723C5BEB80008754B /* Config */,
 				019EFD5423C204D700294C84 /* ModuleBuilder */,
 				019EFD5323C204CF00294C84 /* Interactor */,
 				019EFD5223C204C900294C84 /* Protocols */,
@@ -644,8 +661,8 @@
 				01751E0B23C3B4D9003966B8 /* UILabel+Extensions.swift in Sources */,
 				01FABAEC23BF8C7C00A9A0CA /* PaymentCardsViewController.swift in Sources */,
 				019EFD3523C1D05800294C84 /* UIViewController+Alert.swift in Sources */,
+				0163C18223C598CC0008754B /* DueView.swift in Sources */,
 				01A1701323BF8B5D007E21B1 /* AppDelegate.swift in Sources */,
-				01A092CD23C27973009C27CB /* ObservableView.swift in Sources */,
 				01FABAEE23BF8C7C00A9A0CA /* PaymentCardsInteractor.swift in Sources */,
 				019EFD3A23C1D0D700294C84 /* Strings.swift in Sources */,
 				01FABAF523C1C58F00A9A0CA /* PCard.swift in Sources */,
@@ -654,13 +671,16 @@
 				019EFD3F23C1D1D800294C84 /* UIColor+Theme.swift in Sources */,
 				019EFD4123C1D23C00294C84 /* UIView+Theme.swift in Sources */,
 				019EFD4B23C1EC2100294C84 /* AppError.swift in Sources */,
+				0163C18923C5BEC50008754B /* CardConfig.swift in Sources */,
 				01FABAF723C1C6C900A9A0CA /* AppRouter.swift in Sources */,
 				019EFD3D23C1D1A200294C84 /* UITableView+Reusable.swift in Sources */,
 				01A092CA23C2321A009C27CB /* UIPanGesture+Directions.swift in Sources */,
 				019EFD3123C1D01100294C84 /* UIView+Autolayout.swift in Sources */,
 				01FABAED23BF8C7C00A9A0CA /* PaymentCardsProtocols.swift in Sources */,
+				0163C18623C5BB150008754B /* ActionView.swift in Sources */,
 				019EFD4823C1E14A00294C84 /* MockNetwork.swift in Sources */,
 				01FABAEB23BF8C7C00A9A0CA /* PaymentCardsRouter.swift in Sources */,
+				0163C18423C5B4440008754B /* CardView.swift in Sources */,
 				019EFD3823C1D08400294C84 /* AppDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,7 +852,7 @@
 				DEVELOPMENT_TEAM = N5BV6E5637;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Swippy/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -854,7 +874,7 @@
 				DEVELOPMENT_TEAM = N5BV6E5637;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Swippy/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
